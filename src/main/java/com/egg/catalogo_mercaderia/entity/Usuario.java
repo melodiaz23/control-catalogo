@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Entity
 @Getter
 @Setter
@@ -18,7 +20,7 @@ public class Usuario {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
   @Column(name = "id_usuario")
-  private String idUsuario;
+  private UUID idUsuario;
 
   @Column(length = 50, nullable = false)
   private String nombre;
