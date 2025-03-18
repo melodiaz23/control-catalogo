@@ -1,0 +1,14 @@
+<div class="container mx-auto p-5" th:fragment="messages">
+    <div th:if="${error != null}" class="bg-red-500 text-white rounded-md shadow-md mb-3">
+        <div class="p-4">
+            <h5 class="text-lg font-bold">Error!</h5>
+            <p class="mt-1" th:text="${error}"></p>
+        </div>
+    </div>
+    <div th:if="${exito != null}" class="bg-green-500 text-white rounded-md shadow-md mb-3 mt-3">
+        <div class="p-4">
+            <h5 class="text-lg font-bold">Exito!</h5>
+            <p class="mt-1" th:text="${exito}"></p>
+        </div>
+    </div>
+</div>

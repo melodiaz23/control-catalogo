@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-</head>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<div th:replace="~{fragments/head :: head}"></div>
 <body>
     <header>
         <nav>
-            <h1>La Casa de Electricidad</h1>
+            <div href="/">
+                <h1>La Casa de Electricidad</h1>
+            </div>
             <div class="nav-buttons">
                 <a href="listarfabricas.html" class="btn">Listar fábricas</a>
                 <a href="listararticulos.html" class="btn">Listar artículos</a>
@@ -24,9 +21,6 @@
             <p>Accede a las opciones para gestionar fábricas y artículos.</p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 La Casa de Electricidad. Todos los derechos reservados.</p>
-    </footer>
+    <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

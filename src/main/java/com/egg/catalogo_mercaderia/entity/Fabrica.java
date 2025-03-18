@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -18,9 +19,9 @@ import java.util.List;
 public class Fabrica {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.UUID)
   @Column(name = "id_fabrica")
-  private Long idFabrica;
+  private UUID idFabrica;
 
   @Column(name = "nombre_fabrica", nullable = false, length = 100)
   private String nombreFabrica;

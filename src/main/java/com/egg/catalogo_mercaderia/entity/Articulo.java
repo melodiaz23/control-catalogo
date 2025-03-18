@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -16,9 +17,9 @@ import java.util.List;
 public class Articulo {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.UUID)
   @Column(name = "id_articulo")
-  private Long idArticulo;
+  private UUID idArticulo;
 
   @Column(name = "nro_articulo", unique = true, nullable = false)
   private Integer nroArticulo;
