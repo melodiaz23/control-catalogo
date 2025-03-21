@@ -2,22 +2,11 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <div th:replace="~{fragments/head :: head}"></div>
 <body>
-    <header>
-        <nav>
-            <div href="/">
-                <h1>La Casa de Electricidad</h1>
-            </div>
-            <div class="nav-buttons">
-                <a href="listarfabricas.html" class="btn">Listar fábricas</a>
-                <a href="listararticulos.html" class="btn">Listar artículos</a>
-                <a href="login.html" class="btn logout">Cerrar sesión</a>
-            </div>
-        </nav>
-    </header>
-
+    <header th:replace="~{fragments/header :: header}"></header>
+    <div th:replace="~{fragments/messages :: messages}"></div>
     <main>
-        <section class="welcome">
-            <h2>Bienvenido a tu panel</h2>
+        <section th:if="${session.usuariosession != null}" class="welcome" >
+            <h2 th:text="'Bienvenido a tu panel ' + ${session.usuariosession.nombre}"></h2>
             <p>Accede a las opciones para gestionar fábricas y artículos.</p>
         </section>
     </main>

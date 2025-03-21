@@ -1,10 +1,7 @@
 package com.egg.catalogo_mercaderia.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "fabricas")
 public class Fabrica {
 
@@ -23,6 +20,7 @@ public class Fabrica {
   @Column(name = "id_fabrica")
   private UUID idFabrica;
 
+  @NonNull
   @Column(name = "nombre_fabrica", nullable = false, length = 100)
   private String nombreFabrica;
 

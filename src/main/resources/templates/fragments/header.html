@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+    <nav>
+        <div href="/">
+            <h1>La Casa de Electricidad</h1>
+        </div>
+        <div class="nav-buttons" th:if="${session.usuariosession != null}">
+            <a th:href="@{/fabrica/listar}" class="btn">Listar fábricas</a>
+            <a th:href="@{/articulo/listar}" class="btn">Listar artículos</a>
+            <a th:href="@{/logout}" class="btn logout">Cerrar sesión</a>
+        </div>
+    </nav>
+</header>
+</body>
+</html>
+

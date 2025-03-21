@@ -2,10 +2,7 @@ package com.egg.catalogo_mercaderia.entity;
 
 import com.egg.catalogo_mercaderia.enums.Rol;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
@@ -13,7 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "usuarios")
 public class Usuario {
 
@@ -22,15 +19,19 @@ public class Usuario {
   @Column(name = "id_usuario")
   private UUID idUsuario;
 
+  @NonNull
   @Column(length = 50, nullable = false)
   private String nombre;
 
+  @NonNull
   @Column(length = 50, nullable = false)
   private String apellido;
 
+  @NonNull
   @Column(unique = true, length = 100, nullable = false)
   private String email;
 
+  @NonNull
   @Column(length = 70, nullable = false)
   private String password;
 

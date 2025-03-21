@@ -2,13 +2,7 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <div th:replace="~{fragments/head :: head}"></div>
 <body>
-    <header>
-        <nav>
-            <div href="/">
-                <h1>La Casa de Electricidad</h1>
-            </div>
-        </nav>
-    </header>
+<header th:replace="~{fragments/header :: header}"></header>
     <main>
         <section class="welcome">
             <h2>Bienvenido a La Casa de Electricidad</h2>
@@ -22,3 +16,5 @@
     <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>
+
+
